@@ -35,10 +35,10 @@ cd ../../opt/apache-tomcat-8.5.35/
 cd webapps
 
 echo "Removing the current app out of the Tomcat webapps folder."
-rm -r pims-ng pims-ng.war
+rm -r app app.war
 
 echo "Copying the new .war file to the Tomcat webapps folder"
-cp proj_dir .
+cp proj_dir/app.war .
 
 cd ../bin
 if lsof -Pi :8080 -sTCP:LISTEN -t >/dev/null ; then
